@@ -1,0 +1,32 @@
+<!DOCTYPE html> <!--브라우저에 html 이라고 알려줌 -->
+<html> <!--html 이라고 알려주는 부분-->
+    <head> <!--사전준비-->
+        <title>Web edu</title> <!--웹페이지 제목-->
+        <style>
+            body{
+                background-color: #f0ff00;
+            }
+            #s{
+                font-size: 48px;
+            }
+        </style>
+    </head>
+    <body> <!--내용 -->
+        <div id="s" onclick="textClick()"> hi </div>
+        <script>
+            var save = true;
+
+            function textClick(){
+                let e = document.getElementById("s");
+                if(save == true){
+                    e.innerText = "hello, kim"
+                    save = false;
+                }
+                else{
+                    e.innerText = "hi"
+                    save = true;
+                }
+            }
+        </script>
+    </body>
+</html>
