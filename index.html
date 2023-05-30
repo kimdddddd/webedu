@@ -1,32 +1,39 @@
-<!DOCTYPE html> <!--브라우저에 html 이라고 알려줌 -->
-<html> <!--html 이라고 알려주는 부분-->
-    <head> <!--사전준비-->
-        <title>Web edu</title> <!--웹페이지 제목-->
-        <style>
-            body{
-                background-color: #f0ff00;
-            }
-            #s{
-                font-size: 48px;
-            }
-        </style>
-    </head>
-    <body> <!--내용 -->
-        <div id="s" onclick="textClick()"> hi </div>
-        <script>
-            var save = true;
+<!DOCTYPE html>
+<html>
+<head>
+    <title>틱텍톡game</title>
+    <style>
+        #box{
+            width: 600px;
+            height: 600px;
+           background-color: mediumaquamarine;
+           display: flex;
+           flex-wrap: wrap;
 
-            function textClick(){
-                let e = document.getElementById("s");
-                if(save == true){
-                    e.innerText = "hello, kim"
-                    save = false;
-                }
-                else{
-                    e.innerText = "hi"
-                    save = true;
-                }
-            }
-        </script>
-    </body>
+        }
+        .oxbox{
+            width: 190px;
+            height: 190px;
+           background-color: #0f0;
+           border: 5px solid #000;
+
+        }
+    </style>
+    
+
+</head>
+<body>
+<div id = 'box'>
+    <div class="oxbox"></div>
+    <div class="oxbox"></div>
+    <div class="oxbox"></div>
+    <div class="oxbox"></div>
+    <div class="oxbox"></div>
+    <div class="oxbox"></div>
+    <div class="oxbox"></div>
+    <div class="oxbox"></div>
+    <div class="oxbox"></div>
+</div>
+
+</body>
 </html>
