@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head lang="ko">
+
     <title>틱텍톡game</title>
     <style>
         #box{
             width: 600px;
             height: 600px;
            background-color: mediumaquamarine;
+           margin: auto;
            display: flex;
            flex-wrap: wrap;
 
         }
         .oxbox{
             width: 190px;
-            height: 190px;
+            height: 170px;
            background-color: #0f0;
            border: 5px solid #000;
+           color: #fff;
+           font-size: 48px;
+           text-align: center;
+           padding-top: 20px;
 
         }
     </style>
@@ -24,16 +30,34 @@
 </head>
 <body>
 <div id = 'box'>
-    <div class="oxbox"></div>
-    <div class="oxbox"></div>
-    <div class="oxbox"></div>
-    <div class="oxbox"></div>
-    <div class="oxbox"></div>
-    <div class="oxbox"></div>
-    <div class="oxbox"></div>
-    <div class="oxbox"></div>
-    <div class="oxbox"></div>
+    <div id ="1" class="oxbox" onclick="box_click(1)"></div>
+    <div id ="2" class="oxbox" onclick="box_click(2)"></div>
+    <div id ="3" class="oxbox" onclick="box_click(3)"></div>
+    <div id ="4" class="oxbox" onclick="box_click(4)"></div>
+    <div id ="5" class="oxbox" onclick="box_click(5)"></div>
+    <div id ="6" class="oxbox" onclick="box_click(6)"></div>
+    <div id ="7" class="oxbox" onclick="box_click(7)"></div>
+    <div id ="8" class="oxbox" onclick="box_click(8)"></div>
+    <div id ="9" class="oxbox" onclick="box_click(9)"></div>
 </div>
 
+<script>
+    var turn= true;
+
+    function box_click(num){
+        let e = document.getElementById(num);
+        if(turn){
+            e.innerText = "O";
+            turn = false;
+            
+        }
+        else{
+            e.innerText = "X";
+            turn = true;
+        }
+    }
+
+
+</script>
 </body>
 </html>
